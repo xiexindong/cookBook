@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import { Route, Switch,Redirect } from 'react-router-dom';
 
 function Home(props){
@@ -16,7 +16,6 @@ function Detail(){
 
 
 const App = (props)=>{
-  console.log(props)
   return<Switch>
     <Route path="/home" children={(props)=><Home {...props}></Home>}/>
     <Route path="/list"  children={(props)=><List {...props}></List>}/>

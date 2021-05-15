@@ -1,5 +1,6 @@
 import { fromJS, List } from 'immutable'
-import LOADDATA from './actionTypes'
+import { LOADDATA } from './actionTypes'
+
 
 const defaultState = fromJS({
     list: []

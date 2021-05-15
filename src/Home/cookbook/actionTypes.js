@@ -1,1 +1,1 @@
-export const LOADDATA = 'home/cookbook/loaddata'
+export  const LOADDATA = 'home/cookbook/loaddata'
