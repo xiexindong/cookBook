@@ -1,8 +1,14 @@
 import { combineReducers } from 'redux-immutable'
 import {reducer as cookbook} from '@/Home/cookbook'
 
+import {
+    reducer as category
+} from '../Home/category'
+  
+
 const reducer = combineReducers({
-    cookbook
+    cookbook,
+    category
 })
 
 
