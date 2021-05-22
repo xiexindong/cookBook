@@ -1,5 +1,9 @@
 import { combineReducers } from 'redux-immutable'
-import {reducer as cookbook} from '@/Home/cookbook'
+
+import {
+    reducer as cookbook
+} from '@/Home/cookbook'
+
 
 import {
     reducer as category
@@ -9,7 +13,7 @@ import {
 const reducer = combineReducers({
     cookbook,
     category
-})
+  })
 
 
 export default  reducer 

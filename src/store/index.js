@@ -22,7 +22,6 @@ const store = createStore(
    
 )
 
-
 sagas.forEach(saga =>  sagaMiddleware.run(saga))
 
 

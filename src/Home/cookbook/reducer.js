@@ -9,7 +9,7 @@ const defaultState = fromJS({
 const reducer = (state = defaultState, action)=>{
     switch(action.type){
         case LOADDATA:
-            return state.set('list',List(action.list))
+            return state.set('list', List(action.list))
         default:
             return state    
     }

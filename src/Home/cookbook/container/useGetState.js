@@ -5,11 +5,11 @@ import actionCreator from '../actionCreator'
 
 
 const useGetState = ()=> {
-        const state = useSelector(state => state.getIn('cookbook'))
+        const state = useSelector(state => state.getIn(['cookbook']))
         const dispatch =useDispatch()
 
         useEffect(()=>{
-            dispatch(actionCreator.loadDataSync())
+            dispatch(actionCreator.loadDataSyncSaga())
         },[dispatch])
 
         return {

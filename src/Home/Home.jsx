@@ -26,11 +26,12 @@ import { CookBook } from './cookbook/'
 
 
 const Home = (props) =>{
+
     const state = useSelector(state => state)
-    console.log('state',state.toJs())
     const [tabs, setTabs] = useState({
         selectedTab:state.getIn(['category']),
     })
+    console.log(1111,tabs)
     const tabItems = [
         <TabBar.Item
             title="美食大全"
@@ -54,8 +55,52 @@ const Home = (props) =>{
       >
         <CookBook></CookBook>
       </TabBar.Item>,
-        
+      <TabBar.Item
+      icon={
+        <div style={{
+          width: '22px',
+          height: '22px',
+          background: `url(${menu}) center center /  21px 21px no-repeat` }}
+        />
+      }
+      selectedIcon={
+        <div style={{
+          width: '22px',
+          height: '22px',
+          background: `url(${menuActive}) center center /  21px 21px no-repeat` }}
+        />
+      }
+      title="分类"
+      key="category"
+      selected={tabs.selectedTab === 'category'}
+      onPress={() => {
+        setTabs({
+          selectedTab: 'category',
+        })
+      }}
+    >
+      
+    </TabBar.Item>,
     ]
+
+  return(
+    <div style={{ position: 'fixed', zIndex: 2, height: '100%', width: '100%', top: 0 }}>
+         <TabBar
+          unselectedTintColor="#949494"
+          tintColor="#33A3F4"
+          barTintColor="white"
+          >
+            {
+             tabItems.map(item =>item) 
+            }
+        </TabBar>  
+      
+
+    </div>
+  )
     
 }
+
+
+export default animate(Home)
 
