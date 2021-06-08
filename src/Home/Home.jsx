@@ -20,18 +20,18 @@ import more from '@a/images/more.png'
 import moreActive from '@a/images/more-active.png'
 
 import { CookBook } from './cookbook/'
-// import { Category } from './category/'
-// import { More } from './more/'
-// import Map from './map/Map'
+
+import { actionCreator as ac } from '@/Home/category';
 
 
 const Home = (props) =>{
+
+    let dispatch = useDispatch()
 
     const state = useSelector(state => state)
     const [tabs, setTabs] = useState({
         selectedTab:state.getIn(['category']),
     })
-    console.log(1111,tabs)
     const tabItems = [
         <TabBar.Item
             title="美食大全"
@@ -77,8 +77,11 @@ const Home = (props) =>{
         setTabs({
           selectedTab: 'category',
         })
+        dispatch(ac.changeSelectedTab('category'))
       }}
     >
+
+      lisit 
       
     </TabBar.Item>,
     ]
