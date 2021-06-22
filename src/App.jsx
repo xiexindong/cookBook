@@ -1,10 +1,9 @@
 import React from 'react';
 import { Route, Switch,Redirect } from 'react-router-dom';
 import { Home } from './Home/'
+import  { List } from './Home/list/'
 
-function List(){
-  return<div>List</div>
-}
+
 
 
 function Detail(){

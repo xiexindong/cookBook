@@ -67,6 +67,7 @@ const data = [
 const HotCate = ()=>{
   let [columnNum, setColumnNum ] = useState(4)
   let [hotCateList] = useState(data)
+  let history = useHistory()
 
   useEffect(()=>{
     let width = window.innerWidth
@@ -74,6 +75,11 @@ const HotCate = ()=>{
       setColumnNum(3)
     }
   },[])
+
+  const handleClick = useCallback( ({title},index)=>{
+    // history.push("/list",{title,from:'/home'})
+    history.push('/list',{ title, from :'/home' })
+  },[History])
 
   return (
     <HotCateWrap>
@@ -93,6 +99,7 @@ const HotCate = ()=>{
               </div>
             </div>
           )}
+          onClick={handleClick}
 
         ></Grid>
     </HotCateWrap>

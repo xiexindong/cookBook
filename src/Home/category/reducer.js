@@ -8,7 +8,6 @@ const defaultState = fromJS({
   })
 
   const reducer = (state = defaultState,action)=>{
-      console.log('action',action)
       switch(action.type){
            case 'changeSelectedTab':
               return state.setIn(['routeInfo','selectedTab'],action.selectedTab)

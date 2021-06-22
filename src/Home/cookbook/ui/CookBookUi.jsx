@@ -10,6 +10,7 @@ import HotCate from './HotCate'
 
   
   const CookbookUi = (props)=>{
+      console.log('props222',props.list)
       const swiper = memoize(list => list.slice(0,5))
       return(
           <Container>
