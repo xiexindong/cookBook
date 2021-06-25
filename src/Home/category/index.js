@@ -1,7 +1,8 @@
-import reducer from './reducer'
+import Category from './container/Category';
+import reducer from './reducer';
 import actionCreator from './actionCreator';
-
-export {
+export { 
+    Category,
+    actionCreator,
     reducer,
-    actionCreator
 }

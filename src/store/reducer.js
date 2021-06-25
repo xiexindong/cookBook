@@ -8,7 +8,6 @@ import {
 import {
     reducer as category
 } from '../Home/category'
-  
 
 const reducer = combineReducers({
     cookbook,
