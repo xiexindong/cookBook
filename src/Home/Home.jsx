@@ -31,7 +31,6 @@ import { actionCreator as ac } from '@/Home/category';
 const Home = (props) =>{
 
     let dispatch = useDispatch()
-
     const state = useSelector(state => state)
     const [tabs, setTabs] = useState({
         selectedTab:state.getIn(['category','routeInfo','selectedTab']),

@@ -6,7 +6,7 @@ import {
 
 
 const MenuList = (props) =>{
-  let { cata,onAsideClick,curCate} = props
+  let { cata,onAsideClick,curCate, onGotoList} = props
    return<MenuWrap
       width="1px 0 0 0"
    >
@@ -31,6 +31,7 @@ const MenuList = (props) =>{
           cata && curCate && cata[curCate].map(value =>{
             return<li
               key = {value}
+              onClick = { onGotoList(value) }
             >
               {value}
             </li>
